@@ -3,8 +3,8 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - master  # Triggers on push to main branch
-  workflow_dispatch: # Allows the workflow to be manually triggered
+      - master
+  workflow_dispatch:
   
 
 jobs:
@@ -29,5 +29,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages   # Deploy to the gh-pages branch
-          folder: dist/portfolio-project  # Change this to match the outputPath
+          branch: gh-pages
+          folder: dist/rpajaro-portfolio
