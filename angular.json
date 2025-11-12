@@ -36,8 +36,8 @@
           },
           "configurations": {
             "production": {
-              "outputPath": "dist/rpajaro-portfolio",
-              "baseHref": "/rpajaro-portfolio",
+              "outputPath": "dist/Portfolio-Project",
+              "baseHref": "/Portfolio-Project",
               "budgets": [
                 {
                   "type": "initial",
