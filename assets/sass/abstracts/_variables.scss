@@ -1,0 +1,282 @@
+@use "sass:color";
+
+/* CSS VARIABLE TABLE OF CONTENTS
+**  1.0 - Base size
+**  2.0 - Colors
+***  2.1 - Neutral
+***  2.2 - Color Palette
+***  2.3 - Gray Scale
+***  2.4 - Lighten & Darken
+***  2.5 - Brand Variables
+**  3.0 - Fonts
+***   3.1 - Typography
+***   3.2 - Header Style
+***   3.3 - Label Style
+***   3.4 - List Style
+***   3.5 - Font Declarations
+**  4.0 - Border
+**  5.0 - Box Shadow
+**  6.0 - Button
+**  7.0 - Card Style
+**  8.0 - Link
+**  9.0 - Tool Tip
+**  10.0 - Modals
+**  11.0 - Floating Form
+*/
+
+/** 1.0 - Base  **/
+$base-size: 1rem;
+$margin: $base-size;
+$padding: $base-size;
+
+/* =========================================== */
+
+/** 2.0 - Colors  **/
+
+/***  2.1 - Neutral Color ***/
+$white: #fff;
+$white-opacity-10: rgba($white, 0.1);
+$black: #0d0d0e; // BOX SHADOW, TEXTS
+$black-1: #0c343d; // SIGN UP BUTTON
+$black-2: #4c595d; // TEXT COLORS
+$black-3: #f4f5f5; // HEADER
+$black-4: #717f83; // HEADER TEXT
+$black-5: #484951; // TABLE HEADER
+$black-6: #294752; // ICONS
+$black-7: #1d373c; // LEGENDS
+$black-opacity-10: rgba($black, 0.1);
+
+/***  2.2 - Color Palette ***/
+$red: #dc3545; // ERROR, DASHBOARD
+$red-opacity-10: rgba($red, 0.1);
+$yellow: #ffc107; // DASHBOARD BAR, TAB UNDERLINE
+$yellow-opacity-10: rgba($yellow, 0.1);
+$green: #28a745; // SUCCESS
+$green-opacity-10: rgba($green, 0.1);
+$blue: #00beff !default; // PRIMARY
+$blue-opacity-10: rgba($blue, 0.1);
+$teal: #33abb5 !default; // PRIMARY, SUCCESS
+$teal-1: #27898e;
+$teal-2: #4c868f; // TITLE SIDENAV
+$teal-opacity-10: rgba($teal, 0.1);
+$navy-blue: #487e8d; // SECONDARY
+$navy-opacity-10: rgba($navy-blue, 0.1);
+$blue: #7bceea;
+$blue-1: #91b5bf;
+$red: #d2223e;
+$red-opacity-10: rgba($red, 0.1);
+$yellow: #f4cb20;
+$yellow-opacity-10: rgba($yellow, 0.1);
+$orange: #f47820;
+$orange-opacity-10: rgba($orange, 0.1);
+$purple: #a78bfa;
+
+/***  2.3 - [Blueish] Gray Scale ***/
+$gray: #f5f5f5; // BG COLOR
+$gray-1: #e6e6e6; // BORDERS
+$gray-2: #6d8e98; // MUTED TEXTS & ICONS
+$gray-3: #526371; // DARKER GRAY TEXTS
+$gray-4: #fafafa; // NGXDROPZONE BG
+$gray-5: #dcdcdc; // DROPDOWN HOVER
+$gray-6: #83969e; // Search icon
+$gray-7: #f8f9fa; // ARCHIVE BUTTON INACTIVE, BG COLOR
+$gray-8: #8695a2; // SIDENAV
+$gray-2-opacity-10: rgba($gray-2, 0.1);
+$gray-5: #e9ecef; // disabled
+
+/* =========================================== */
+
+/***  2.4 - Lighten & Darken ***/
+
+/****  Blue ****/
+$blue-base: #00beff;
+$blue-darkest: color.adjust($blue-base, $lightness: -32%);
+$blue-darker: color.adjust($blue-base, $lightness: -24%);
+$blue-dark: color.adjust($blue-base, $lightness: -16%);
+$blue-light: color.adjust($blue-base, $lightness: 16%);
+$blue-lighter: color.adjust($blue-base, $lightness: 32%);
+$blue-lightest: color.adjust($blue-base, $lightness: 44%);
+
+/**** Red ****/
+$red-base: #dc3545 !default;
+$red-darkest: color.adjust($red-base, $lightness: -32%);
+$red-darker: color.adjust($red-base, $lightness: -24%);
+$red-dark: color.adjust($red-base, $lightness: -16%);
+$red-light: color.adjust($red-base, $lightness: 16%);
+$red-lighter: color.adjust($red-base, $lightness: 32%);
+$red-lightest: color.adjust($red-base, $lightness: 44%);
+
+/**** Yellow ****/
+$yellow-base: #ffc107 !default;
+$yellow-darkest: color.adjust($yellow-base, $lightness: -32%);
+$yellow-darker: color.adjust($yellow-base, $lightness: -24%);
+$yellow-dark: color.adjust($yellow-base, $lightness: -16%);
+$yellow-light: color.adjust($yellow-base, $lightness: 16%);
+$yellow-lighter: color.adjust($yellow-base, $lightness: 32%);
+$yellow-lightest: color.adjust($yellow-base, $lightness: 44%);
+
+/****  Green ****/
+$green-base: #28a745 !default;
+$green-darkest: color.adjust($green-base, $lightness: -32%);
+$green-darker: color.adjust($green-base, $lightness: -24%);
+$green-dark: color.adjust($green-base, $lightness: -16%);
+$green-light: color.adjust($green-base, $lightness: 16%);
+$green-lighter: color.adjust($green-base, $lightness: 32%);
+$green-lightest: color.adjust($green-base, $lightness: 44%);
+
+/**** Gray ****/
+$gray-base: #6c757d !default;
+$gray-darkest: color.adjust($gray-base, $lightness: -32%);
+$gray-darker: color.adjust($gray-base, $lightness: -24%);
+$gray-dark: color.adjust($gray-base, $lightness: -16%);
+$gray-light: color.adjust($gray-base, $lightness: 16%);
+$gray-lighter: color.adjust($gray-base, $lightness: 24%);
+$gray-lightest: color.adjust($gray-base, $lightness: 44%);
+
+/* =========================================== */
+
+/***  2.5 - Brand Variables ***/
+$brand-primary: $teal !default;
+$brand-secondary: $navy-blue;
+
+// State Colors
+$brand-success: $green !default; // green
+$brand-info: $blue !default; // light blue
+$brand-warning: $yellow !default; // amber
+$brand-pending: $yellow-light !default; // yellow
+$brand-danger: $red !default; // red
+$brand-attention: $red-light !default; // orange
+
+/* =========================================== */
+
+/**  3.0 - Fonts  **/
+
+/***  3.1 - Typography ***/
+$font-base-family: "Lato", sans-serif !default;
+$fontawesome: normal normal normal 14px / 1 fontawesome;
+$font-body: 400 14px / 26px $font-base-family;
+
+// FONT WEIGHT
+$fw-thin: 300 !default;
+$fw-normal: 400 !default;
+$fw-semi-bold: 600 !default;
+$fw-bold: 700 !default;
+$fw-bolder: 900 !default;
+
+// FONT SIZES
+// 24 + .8rem per 2.25vw max 36px
+$h1-font-size: clamp(1.5rem, calc(0.71rem + 2.25vw), 2.25rem);
+
+// 18 + .8rem per 1.125vw max 24px
+$h2-font-size: clamp(1.125rem, calc(0.77rem + 1.5vw), 1.5rem);
+
+// 16 + .8rem per 1.125vw max 18px
+$h3-font-size: clamp(1rem, calc(0.8rem + 1.125vw), 1.125rem);
+
+// 14 + .8rem per 1.125vw max 16px
+$h4-font-size: clamp(0.875rem, calc(0.82rem + 1vw), 1rem);
+
+// 12 + .8rem per 0.875vw max 14px
+$h5-font-size: clamp(0.75rem, calc(0.83rem + 0.875vw), 0.875rem);
+
+// 14 + .8rem per 1.125vw max 16px
+$p-font-size: clamp(0.875rem, calc(0.82rem + 1vw), 0.875rem);
+
+// 12 + .8rem per 0.875vw max 14px
+$label-font-size: clamp(0.75rem, calc(0.83rem + 0.875vw), 0.875rem);
+
+/***  3.2 - Header Style ***/
+$h1-font: 900 3rem / 3.5rem $font-base-family;
+$h2-font: 300 3rem / 3.5rem $font-base-family;
+$h3-font: 400 1.5rem / 1.6rem $font-base-family;
+$h4-font: 600 1.125rem / 2rem $font-base-family;
+$h5-font: 600 1rem / 1.125rem $font-base-family;
+$h6-font: 600 0.875rem / 1rem $font-base-family;
+
+/***  3.3 - Label & Paragraph Style ***/
+$label-font: $fw-semi-bold $label-font-size / 1.7 $font-base-family;
+$p-font: $fw-normal $p-font-size / 1.7 $font-base-family;
+
+/***  3.4 - List Style ***/
+$ul-font: 400 16px / 28px $font-base-family;
+$ol-font: 400 16px / 28px $font-base-family;
+$li-font: 400 16px / 28px $font-base-family;
+
+/* =========================================== */
+
+/***  4.0 - Border Style ***/
+$border-base-weight: 1px;
+$border-base-style: solid;
+$border-base-color: $gray-lightest;
+
+/* Short hand property */
+$border-style: $border-base-weight $border-base-style $border-base-color;
+$border-base-radius: 0.0625em;
+
+/***  5.0 - Box Shadow Style ***/
+$box-base-shadow: 0 10px 15px rgba($gray-1, 0.1);
+$box-base-shadow-ie: 0 10px 15px rgba($gray-1, 0.1); // -webkit-box-shadow
+$box-base-shadow-moz: 0 10px 15px rgba($gray-1, 0.1); // -moz-box-shadow:
+$box-shadow-hover: 0 10px 15px rgba($gray-1, 0.4);
+
+/***  6.0 - Buttons Style ***/
+$button-radius: 0.375rem;
+
+/***  7.0 - Card Style ***/
+$card-bg-color: $white;
+$card-border: $border-base-radius;
+$card-title-font: 700 16px / 24px $font-base-family;
+$card-content-font: 400 14px / 24px $font-base-family;
+$card-price-font: 700 14px / 24px $font-base-family;
+
+/***  8.0 - Link  ***/
+$link-font: 600 16px / 24px $brand-secondary;
+
+/***  9.0 - Tool tip  ***/
+$tooltip-bg-color: $black-1 !default;
+$tooltip-font-color: $white !default;
+$tooltip-arrow-color: $black-1 !default;
+$tooltip-opacity: 1 !default;
+
+/*** 10.0 - Modals ***/
+$modal-content-bg: $white !default;
+$modal-backdrop-bg: $gray-lighter !default;
+$modal-backdrop-opacity: 0.9 !default;
+
+/* =========================================== */
+
+/*** 10.0 - Forms input ***/
+$input-color: $black-2 !default;
+$input-border: $gray-lightest !default;
+$input-color-placeholder: $gray-lightest !default;
+
+/* =========================================== */
+
+/*** 11.0 - Floating Forms ***/
+// $form-floating-height:            add(3.5rem, $input-height-border);
+$form-floating-line-height: 1.25;
+
+// $form-floating-padding-x:         $input-padding-x;
+$form-floating-padding-y: 1rem;
+$form-floating-input-padding-t: 1.625rem;
+$form-floating-input-padding-b: 0.625rem;
+$form-floating-label-opacity: 0.65;
+$form-floating-label-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+$form-floating-transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+
+/* =========================================== */
+
+/*** Disabled cursor for form controls and buttons. ***/
+$cursor-disabled: not-allowed !default;
+
+/* =========================================== */
+
+/*** Breakpoints ***/
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
