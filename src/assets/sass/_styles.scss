@@ -1,0 +1,17 @@
+@import "abstracts/abstracts";
+@import "pages/pages";
+
+body {
+  /* Color */
+  //background-color: $black;
+  background-image: url('../images/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $white;
+
+  /* Display & Box Model */
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}

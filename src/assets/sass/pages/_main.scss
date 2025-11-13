@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+.main-component {
+  font-family: 'JetBrains Mono', monospace;
+
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  height: 100vh !important;
+  position: relative;
+
+  .background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .hero {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    background: none;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    line-height: 1.2;
+  }
+
+  .typewriter {
+    display: inline-flex;
+    align-items: center;
+    height: 1.2em;
+    line-height: 1.2;
+    vertical-align: middle;
+    border-right: 2px solid var(--primary-color);
+    padding-right: 5px;
+    animation: blink 0.7s step-end infinite;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: $purple;
+    transform: translateY(-8px);
+  }
+
+  .social-links i {
+    font-size: 1.5em;
+  }
+}
