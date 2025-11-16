@@ -3,10 +3,10 @@
 .main-component {
   font-family: 'JetBrains Mono', monospace;
 
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  height: 100vh !important;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  min-height: 50px;
   position: relative;
 
   .background-container {
@@ -24,9 +24,9 @@
     display: block;
   }
 
-  .hero {
-    min-height: 100vh;
-    padding: 8rem 2rem 4rem;
+  .introduction {
+    min-height: 60vh;
+    padding: 4rem 2rem 2.5rem;
     background: none;
     display: flex;
     position: relative;
@@ -34,18 +34,18 @@
     overflow: visible;
   }
 
-  .hero::before {
+  .introduction::before {
     display: none;
   }
 
-  .hero-content {
+  .introduction-content {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
   }
 
-  .hero h1 {
+  .introduction h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     color: var(--text-color);
