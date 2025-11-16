@@ -1,0 +1,76 @@
+.background-component {
+  background: #2b2b2b; /* solid gray-ish background */
+  color: #ffffff;
+  padding: 80px 16px;
+  position: relative;
+  z-index: 1;
+  min-height: 420px;
+}
+
+.background-component .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.background-component .section-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.background-component .section-lead {
+  color: #cfcfcf;
+  margin-bottom: 28px;
+}
+
+/* two-column layout for education and experience */
+.background-component .columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+/* column heading */
+.background-component .column-title {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+/* individual entry cards */
+.background-component .entry {
+  background: #333333;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.background-component .entry-title {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.background-component .entry-meta {
+  display: block;
+  font-size: 0.85rem;
+  color: #bfbfbf;
+  margin-bottom: 8px;
+}
+
+.background-component .entry-desc {
+  margin: 0;
+  color: #e2e2e2;
+  line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+/* responsive: stack columns on narrow screens */
+@media (max-width: 768px) {
+  .background-component .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .background-component {
+    padding: 56px 12px;
+  }
+}
