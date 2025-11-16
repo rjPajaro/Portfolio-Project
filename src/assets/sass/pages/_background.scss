@@ -1,76 +1,125 @@
 .background-component {
-  background: #2b2b2b; /* solid gray-ish background */
-  color: #ffffff;
-  padding: 80px 16px;
-  position: relative;
-  z-index: 1;
-  min-height: 420px;
+  min-height: 100vh;
+  padding-block: clamp(40px, 6vh, 80px);
+  padding-inline: 16px;
+  background:
+    radial-gradient(900px 500px at 15% -10%, rgba(99, 102, 241, 0.16), transparent 60%),  /* indigo glow */
+    radial-gradient(900px 500px at 85% 110%, rgba(14, 165, 233, 0.14), transparent 60%), /* cyan glow */
+    #0f172a; /* deep navy base */
+  color: #fff;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow-x: hidden;
 }
 
 .background-component .container {
   max-width: 1100px;
+  min-height: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .background-component .section-title {
-  margin: 0 0 8px;
-  font-size: 1.6rem;
+  margin: 0;
+  font-size: clamp(1.6rem, 1.2rem + 0.8vw, 2rem);
+  letter-spacing: -0.01em;
 }
 
 .background-component .section-lead {
+  margin: 4px 0 12px;
   color: #cfcfcf;
-  margin-bottom: 28px;
+  max-width: 70ch;
+  font-size: 0.98rem;
 }
 
-/* two-column layout for education and experience */
+/* two-column layout */
 .background-component .columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 22px;
+  margin-top: 4px;
 }
 
-/* column heading */
 .background-component .column-title {
-  margin: 0 0 12px;
-  font-size: 1.15rem;
-  color: #ffffff;
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
 }
 
-/* individual entry cards */
+.background-component .column-title i {
+  color: #60a5fa; /* accent matches glow */
+  font-size: 1.05rem;
+}
+
+/* timeline styling for experience */
+.background-component .column.experience {
+  position: relative;
+  //padding-left: 28px; /* was 36px */
+}
+
+/* entry cards */
 .background-component .entry {
-  background: #333333;
-  border-radius: 8px;
-  padding: 18px;
-  margin-bottom: 16px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  backdrop-filter: blur(4px);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.background-component .column.experience .entry::before {
+  display: none;
+  content: none;
+}
+
+.background-component .entry:hover {
+  transform: translateY(-2px);
+  border-color: rgba(96, 165, 250, 0.35); /* accent on hover */
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.background-component .entry:last-child {
+  margin-bottom: 0;
 }
 
 .background-component .entry-title {
   margin: 0 0 6px;
-  font-size: 1rem;
+  font-size: 1.02rem;
 }
 
 .background-component .entry-meta {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #bfbfbf;
   margin-bottom: 8px;
 }
 
 .background-component .entry-desc {
   margin: 0;
-  color: #e2e2e2;
-  line-height: 1.45;
+  color: #e6e6e6;
+  line-height: 1.55;
   font-size: 0.95rem;
 }
 
-/* responsive: stack columns on narrow screens */
-@media (max-width: 768px) {
+/* responsive */
+@media (max-width: 900px) {
   .background-component .columns {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .background-component {
-    padding: 56px 12px;
+    padding-block: 56px;
+    padding-inline: 12px;
   }
 }

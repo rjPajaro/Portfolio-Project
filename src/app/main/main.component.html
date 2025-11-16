@@ -1,21 +1,58 @@
 <div class="main-component">
-  <div class="background-container absolute inset-0 pointer-events-none" aria-hidden="true">
-    <canvas data-particle-animation data-particle-quantity="40" data-particle-staticity="60"
-      data-particle-ease="40"></canvas>
-  </div>
-
   <div id="home" class="introduction">
+    <div class="background-container" aria-hidden="true">
+      <canvas data-particle-animation data-particle-quantity="40" data-particle-staticity="60" data-particle-ease="40"></canvas>
+    </div>
+
     <div class="introduction-content animate__animated animate__fadeIn">
-      <p class="section-subtitle">Hello, I'm</p>
-      <h1>Randall Joseph Pajaro</h1>
-      <h2 class="typewriter">Full Stack Developer</h2>
-      <p>
-        Passionate software engineer with more than 3 years of experience in building scalable and maintainable web applications and solving
-        complex problems.
-      </p>
-      <div class="social-links">
-        <a href="https://github.com/rjPajaro" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/randall-joseph-pajaro-ab12a8213/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <div class="intro-grid"> <!-- was hero-grid -->
+        <div class="intro-copy"> <!-- was hero-copy -->
+          <div class="intro-card"> <!-- was hero-card -->
+            <p class="section-subtitle">Hello, I'm</p>
+            <h1 class="headline">Randall Joseph Pajaro</h1>
+            <h2 class="typewriter accent">Full Stack Developer</h2>
+
+            <p class="lead">
+              Passionate software engineer with more than 3 years of experience in building scalable and maintainable web applications and solving complex problems.
+            </p>
+
+            <ul class="highlights" aria-label="Highlights">
+              <li><i class="fas fa-server"></i> Backend-focused: C#/.NET, SQL</li>
+              <li><i class="fas fa-code-branch"></i> Angular + TypeScript on the front</li>
+              <li><i class="fas fa-rocket"></i> Builds maintainable and scalable features</li>
+            </ul>
+
+            <div class="cta-buttons">
+              <a class="btn primary" href="assets/RandallPajaro-Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+              <a class="btn" href="#background">Contact</a>
+              <a class="btn ghost" href="https://github.com/rjPajaro" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a class="btn ghost" href="https://www.linkedin.com/in/randall-joseph-pajaro-ab12a8213/" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+
+            <div class="stack-group">
+              <p class="stack-label">Core technologies</p>
+              <ul class="tech-stack" aria-label="Core technologies">
+                <li><i class="fab fa-angular" title="Angular"></i><span>Angular · TypeScript</span></li>
+                <li><i class="fab fa-microsoft" title="C# / .NET"></i><span>C# · .NET</span></li>
+                <li><i class="fas fa-database" title="Databases"></i><span>Azure SQL · MS SQL</span></li>
+              </ul>
+            </div>
+
+            <div class="stack-group">
+              <p class="stack-label">Familiar with</p>
+              <ul class="tech-stack" aria-label="Familiar with">
+                <li><i class="fab fa-python" title="Python"></i><span>Python</span></li>
+                <li><i class="fab fa-js" title="Next.js"></i><span>Next.js</span></li>
+                <li><i class="fas fa-code" title="C++"></i><span>C++</span></li>
+                <li><i class="fab fa-react" title="React"></i><span>React</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

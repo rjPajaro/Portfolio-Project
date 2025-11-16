@@ -1,5 +1,5 @@
 import { Component, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
-import { ParticleOptions, Circle, MousePosition, CanvasSize } from '../_shared/models/background.model';
+import { ParticleOptions, Circle, MousePosition, CanvasSize } from '../_shared/models/animation.model';
 
 @Component({
   selector: 'app-main',
@@ -25,7 +25,7 @@ export class MainComponent implements AfterViewInit, OnDestroy {
   typewriterElement!: HTMLElement | null;
   typewriterTimeout?: number;
 
-  // configurable speeds (ms)
+  // configurable speeds
   typeSpeed: number = 80;
   deleteSpeed: number = 40;
   pauseAfterComplete: number = 1000;
